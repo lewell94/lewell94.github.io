@@ -1,12 +1,14 @@
 const skills = ['ES6', 'React', 'Node.js', 'PHP', 'SCSS', 'Wordpress', 'Gulp', 'Three.js', 'Framework 7'];
 
 const Skill = React.createClass({
+
 	render: function() {
 		return <li className="skill">{ this.props.skill }</li>;
 	}
 });
 
 const Skills = React.createClass({
+
 	render: function() {
 
 		const skills_li = skills.map((skill) => {
@@ -74,17 +76,27 @@ const work = [
 	}
 ];
 
-const Project = React.createClass({
+const Project_LI = React.createClass({
+
+	handleClick: function() {
+		this.props.projectClicked(this.props.index);
+	},
+
 	render: function() {
-		return <li className="project">{ this.props.project }</li>;
+		return <li className="project" onclick={ handleClick }>{ this.props.project }</li>;
 	}
 });
 
 const Work_List = React.createClass({
+
+	handleClick: function(index) {
+		this.props.projectClicked(index);
+	},
+
 	render: function() {
 
-		const work_li = work.map((project) => {
-			return <Project project={ project.name } />
+		const work_li = work.map((project, index) => {
+			return <Project_LI project={ project.name } index={ index } projectClicked={ handleClick } />
 		});
 
 		return (
@@ -95,4 +107,33 @@ const Work_List = React.createClass({
 	}
 });
 
-ReactDOM.render(<Work_List />, document.querySelector('#work'));
+const Work = React.createClass({
+
+	getInitialState: function() {
+		return {
+			project : false
+		}
+	},
+
+	handleClick: function(index) {
+		this.setState({ project : index });
+	},
+
+	render: function() {
+
+		let project = '';
+
+		if ( this.state.project ) {
+			alert(this.state.project)
+		}
+
+		return (
+			<div className="work-container">
+				<Work_List projectClicked={ handleClick } />
+				{ project }
+			</div>
+		);
+	}
+});
+
+ReactDOM.render(<Work />, document.querySelector('#work'));
