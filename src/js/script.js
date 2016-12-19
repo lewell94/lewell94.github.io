@@ -76,6 +76,28 @@ const work = [
 	}
 ];
 
+const Project = React.createClass({
+
+	render: function() {
+
+		const tags_li = this.props.project.tags.map((tag) => {
+			return <li className="tag">{ tag }</li>;
+		})
+
+		return (
+			<div className="project">
+				<h1 className="project__name">{ this.props.project.name }</h1>
+				<a href={ this.props.project.site } className="project__link">Website</a>
+				<p className="project__desc">{ this.props.project.desc }</p>
+				<ul className="project__tags">
+					<li className="tag__header">Tags</li>
+					{ tags_li }
+				</ul>
+			</div>
+		);
+	}
+});
+
 const Project_LI = React.createClass({
 
 	handleClick: function() {
@@ -83,7 +105,7 @@ const Project_LI = React.createClass({
 	},
 
 	render: function() {
-		return <li className="project" onClick={ this.handleClick }>{ this.props.project }</li>;
+		return <li className="work-list__project" onClick={ this.handleClick }>{ this.props.project }</li>;
 	}
 });
 
@@ -124,7 +146,7 @@ const Work = React.createClass({
 		let project = '';
 
 		if ( this.state.project !== null ) {
-			alert(this.state.project)
+			project = <Project project={ work[this.state.project] } />;
 		}
 
 		return (
