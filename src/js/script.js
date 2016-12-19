@@ -83,7 +83,7 @@ const Project_LI = React.createClass({
 	},
 
 	render: function() {
-		return <li className="project" onclick={ this.handleClick }>{ this.props.project }</li>;
+		return <li className="project" onClick={ this.handleClick }>{ this.props.project }</li>;
 	}
 });
 
@@ -111,7 +111,7 @@ const Work = React.createClass({
 
 	getInitialState: function() {
 		return {
-			project : false
+			project : null
 		}
 	},
 
@@ -123,7 +123,7 @@ const Work = React.createClass({
 
 		let project = '';
 
-		if ( this.state.project ) {
+		if ( this.state.project !== null ) {
 			alert(this.state.project)
 		}
 
