@@ -72,4 +72,27 @@ const work = [
 		tags : ['Wordpress', 'PHP', 'SCSS'],
 		desc : 'Website for Park IT.'
 	}
-]
+];
+
+const Project = React.createClass({
+	render: function() {
+		return <li className="project">{ this.props.project }</li>;
+	}
+});
+
+const Work_List = React.createClass({
+	render: function() {
+
+		const work_li = work.map((project) => {
+			return <Project project={ project.name } />
+		});
+
+		return (
+			<ul className="work-list">
+				{ work_li }
+			</ul>
+		)
+	}
+});
+
+ReactDOM.render(<Work_List />, document.querySelector('#work'));
