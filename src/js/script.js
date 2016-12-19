@@ -83,7 +83,7 @@ const Project_LI = React.createClass({
 	},
 
 	render: function() {
-		return <li className="project" onclick={ handleClick }>{ this.props.project }</li>;
+		return <li className="project" onclick={ this.handleClick }>{ this.props.project }</li>;
 	}
 });
 
@@ -96,7 +96,7 @@ const Work_List = React.createClass({
 	render: function() {
 
 		const work_li = work.map((project, index) => {
-			return <Project_LI project={ project.name } index={ index } projectClicked={ handleClick } />
+			return <Project_LI project={ project.name } index={ index } projectClicked={ this.handleClick } />
 		});
 
 		return (
@@ -129,7 +129,7 @@ const Work = React.createClass({
 
 		return (
 			<div className="work-container">
-				<Work_List projectClicked={ handleClick } />
+				<Work_List projectClicked={ this.handleClick } />
 				{ project }
 			</div>
 		);
