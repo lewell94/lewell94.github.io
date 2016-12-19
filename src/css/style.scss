@@ -1,0 +1,93 @@
+$font_heading   : 'Taviraj', serif;
+$font_paragraph : 'Nunito Sans', sans-serif;
+
+$color_dark             : #320E3B;
+$color_light            : #EBF5EE;
+$color_highlight        : #78A1BB;
+$color_highlight_darken : darken($color_highlight, 20%);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: $color_light;
+	margin: 20px;
+	-webkit-font-smoothing: antialiased;
+	-webkit-backface-visibility: hidden;
+	text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+	color: $color_dark;
+	font-family: $font_heading;
+	line-height: 1;
+	margin: 0;
+}
+
+h1 {
+	margin-bottom: 40px;
+}
+
+p, a, li {
+	font-family: $font_paragraph;
+}
+
+p, li {
+	color: $color_dark;
+}
+
+a {
+	color: $color_highlight;
+	text-decoration: none;
+
+	&:hover {
+		color: $color_highlight_darken;
+	}
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	display: table;
+	list-style: none;
+	margin-bottom: 5px;
+}
+
+#work {
+
+	li {
+		cursor: pointer;
+	}
+}
+
+.project {
+	background: $color_light;
+	bottom: 0;
+	left: 0;
+	padding: 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 9;
+
+	.project__close {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+
+	.project__tags {
+
+		li {
+			display: inline-block;
+			padding-right: 15px;
+		}
+
+		.tag__header {
+			font-weight: bold;
+		}
+	}
+}

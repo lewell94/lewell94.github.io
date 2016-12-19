@@ -78,6 +78,11 @@ const work = [
 
 const Project = React.createClass({
 
+	close: function() {
+		window.location.hash = '#';
+		this.props.projectClosed();
+	},
+
 	render: function() {
 
 		const tags_li = this.props.project.tags.map((tag) => {
@@ -86,11 +91,12 @@ const Project = React.createClass({
 
 		return (
 			<div className="project">
+				<a className="project__close" href="#" onClick={ this.close }>Close</a>
 				<h1 className="project__name">{ this.props.project.name }</h1>
 				<a href={ this.props.project.site } className="project__link">Website</a>
 				<p className="project__desc">{ this.props.project.desc }</p>
 				<ul className="project__tags">
-					<li className="tag__header">Tags</li>
+					<li className="tag__header">Tags:</li>
 					{ tags_li }
 				</ul>
 			</div>
@@ -101,6 +107,7 @@ const Project = React.createClass({
 const Project_LI = React.createClass({
 
 	handleClick: function() {
+		window.location.hash = encodeURIComponent(this.props.project);
 		this.props.projectClicked(this.props.index);
 	},
 
@@ -141,12 +148,16 @@ const Work = React.createClass({
 		this.setState({ project : index });
 	},
 
+	projectClosed: function() {
+		this.setState({ project : null });
+	},
+
 	render: function() {
 
 		let project = '';
 
 		if ( this.state.project !== null ) {
-			project = <Project project={ work[this.state.project] } />;
+			project = <Project project={ work[this.state.project] } projectClosed={ this.projectClosed } />;
 		}
 
 		return (
