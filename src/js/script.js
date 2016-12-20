@@ -42,7 +42,8 @@ const work = [
 		name : 'Crucial Trading Website',
 		site : 'http://www.crucial-trading.com/',
 		tags : ['ES6', 'Wordpress', 'PHP', 'SCSS', 'Gulp'],
-		desc : "Working for luxary rug company Crucial Trading to develop their new website, the website is a "
+		desc : "Working for luxary rug company Crucial Trading to develop their new website, the website is a ",
+		imgs : ['crucial-home', 'crucial-inspiration', 'crucial-material', 'crucial-search']
 	},
 	{
 		name : 'The Tattoo Book App',
@@ -54,13 +55,15 @@ const work = [
 		name : 'The Tattoo Book',
 		site : 'https://thetattoobook.co.uk/',
 		tags : ['Wordpress', 'PHP', 'Javascript', 'SCSS'],
-		desc : 'The Tattoo '
+		desc : 'The Tattoo ',
+		imgs : ['tattoobook-home', 'tattoobook-profile', 'tattoobook-request', 'tattoobook-search']
 	},
 	{
 		name : 'Hogarths Hotel',
 		site : 'http://www.hogarths.co.uk/',
 		tags : ['ES6', 'Wordpress', 'PHP', 'SCSS', 'Gulp'],
-		desc : 'Luxary hotel chain Hogarths Hotel needed a new website that would allow them to give each hotel in their chain their own personal site. Therefore a Wordpress multi site was created, along with variations in the Wordpress theme for each hotel in their chain. The site tkae advantage of several Wordpress features such as Custom Post Type and Meta Boxes, allowing Hogarths full control over the content and look of their website.'
+		desc : 'Luxary hotel chain Hogarths Hotel needed a new website that would allow them to give each hotel in their chain their own personal site. Therefore a Wordpress multi site was created, along with variations in the Wordpress theme for each hotel in their chain. The site tkae advantage of several Wordpress features such as Custom Post Type and Meta Boxes, allowing Hogarths full control over the content and look of their website.',
+		imgs : ['hogarths-home', 'hogarths-bedroom', 'hogarths-map', 'hogarths-menu']
 	},
 	{
 		name : 'Airparks',
@@ -78,7 +81,8 @@ const work = [
 		name : 'Park IT',
 		site : 'http://www.park-it-solutions.com/',
 		tags : ['Wordpress', 'PHP', 'SCSS'],
-		desc : 'Airport car parking company Park IT required a new website. The website is a Wordpress site with a modern design and allows Park IT to control the content and keep their customers up-to-date.'
+		desc : 'Airport car parking company Park IT required a new website. The website is a Wordpress site with a modern design and allows Park IT to control the content and keep their customers up-to-date.',
+		imgs : ['park-it-home', 'park-it-about', 'park-it-app', 'park-it-news']
 	}
 ];
 
@@ -93,7 +97,23 @@ const Project = React.createClass({
 
 		const tags_li = this.props.project.tags.map((tag) => {
 			return <li className="tag">{ tag }</li>;
-		})
+		});
+
+		let imgs = '';
+
+		if ( this.props.project.imgs ) {
+			imgs = this.props.project.imgs.map((img) => {
+
+				let url = `https://lewell94.github.io/img/${img}.png`;
+				let src = `./img/${img}.png`;
+
+				return (
+					<a href={ url }>
+						<img src={ src } alt={ img } className="project__img" />
+					</a>
+				);
+			});
+		}
 
 		return (
 			<div className="project">
@@ -101,6 +121,7 @@ const Project = React.createClass({
 				<h1 className="project__name">{ this.props.project.name }</h1>
 				<a href={ this.props.project.site } className="project__link">Website</a>
 				<p className="project__desc">{ this.props.project.desc }</p>
+				{ imgs }
 				<ul className="project__tags">
 					<li className="tag__header">Tags:</li>
 					{ tags_li }
