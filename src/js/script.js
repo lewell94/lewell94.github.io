@@ -30,49 +30,55 @@ const work = [
 		name : 'Park IT ANPR',
 		site : 'http://www.park-it-solutions.com/',
 		tags : ['Node.js', 'ES6', 'APIs', 'Pug', 'SCSS', 'Gulp'],
-		desc : 'Automatic Number Plate Registraton, Node JS server to screen'
+		desc : "Built for airport parking company Park IT's Automatic Number Plate Recognition system, "
 	},
 	{
-		name : 'Crucial Trading',
-		site : 'http://www.crucial-trading.com/',
+		name : 'Crucial Trading Rugbuilder',
+		site : 'http://www.crucial-trading.com/rugbuilder',
 		tags : ['React', 'ES6', 'Three.js', 'Wordpress', 'PHP', 'SCSS', 'Gulp'],
-		desc : 'Website for Crucial Trading.'
+		desc : "For their new website luxary rug company Crucial Trading wanted a Rug Builder that would allow customers to customise rugs in real time. Their previous solution was simple and image based, and therefore was limited in the user's ability to appreciate their designed rugs in full. For the new Rug Builder a more advanced solution was built utilising WebGL through Three.js for displaying the rug to the user, and React for the UI, which allows for a more responsive UI."
+	},
+	{
+		name : 'Crucial Trading Website',
+		site : 'http://www.crucial-trading.com/',
+		tags : ['ES6', 'Wordpress', 'PHP', 'SCSS', 'Gulp'],
+		desc : "Working for luxary rug company Crucial Trading to develop their new website, the website is a "
 	},
 	{
 		name : 'The Tattoo Book App',
 		site : 'https://thetattoobook.co.uk/',
 		tags : ['React', 'ES6', 'Webapp', 'Framework 7', 'APIs', 'iOS', 'Gulp'],
-		desc : 'App for The Tattoo Book.'
+		desc : "In addition to their new website, The Tattoo Book wanted a new app to launch. The app is an HTML5 webapp built with Phonegap, and uses Framework 7 to provide a native experience. The app communicates with a custom API built on the website that allows it receive the data it needs, and uses React for several interfaces including the messages, search results, and tattoo designs page."
 	},
 	{
 		name : 'The Tattoo Book',
 		site : 'https://thetattoobook.co.uk/',
 		tags : ['Wordpress', 'PHP', 'Javascript', 'SCSS'],
-		desc : 'Website for The Tattoo Book.'
+		desc : 'The Tattoo '
 	},
 	{
 		name : 'Hogarths Hotel',
 		site : 'http://www.hogarths.co.uk/',
 		tags : ['ES6', 'Wordpress', 'PHP', 'SCSS', 'Gulp'],
-		desc : 'Website for Hogarths Hotel.'
+		desc : 'Luxary hotel chain Hogarths Hotel needed a new website that would allow them to give each hotel in their chain their own personal site. Therefore a Wordpress multi site was created, along with variations in the Wordpress theme for each hotel in their chain. The site tkae advantage of several Wordpress features such as Custom Post Type and Meta Boxes, allowing Hogarths full control over the content and look of their website.'
 	},
 	{
 		name : 'Airparks',
 		site : 'http://www.airparks.co.uk/',
 		tags : ['Framework 7', 'Javascript', 'APIs'],
-		desc : 'Car check API'
+		desc : 'Aiport car parking company Airparks wanted an app for customers to keep track of their cars whilst on holiday. The app uses Framework 7 to provide a native experience, and connects to the Airparks API to obtain the data. The app provides customers with a screen that shows them the location and status of their car, as well as allowing them to purchase upgrades and change their personal details.'
 	},
 	{
 		name : 'Spearhead eLearning',
 		site : 'https://www.trainwithspearhead.co.uk/',
 		tags : ['WordPress', 'PHP', 'APIs'],
-		desc : 'Reed - Woocommerce, Woocommerce - Highfield.'
+		desc : 'For their website eLearning company Spearhead needed to connect their Reed and Highfield services to create a unified system where, for example, a user can buy a course on Reed, have an account created on Spearhead, and access the course content on Highfield. Therefore two Wordpress plugins were created, on for connecting Reed to Spearhead, and the other for connecting Spearhead to Highfield. The plugins are built with PHP and use a simple OOP architecture.'
 	},
 	{
 		name : 'Park IT',
 		site : 'http://www.park-it-solutions.com/',
 		tags : ['Wordpress', 'PHP', 'SCSS'],
-		desc : 'Website for Park IT.'
+		desc : 'Airport car parking company Park IT required a new website. The website is a Wordpress site with a modern design and allows Park IT to control the content and keep their customers up-to-date.'
 	}
 ];
 
