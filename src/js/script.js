@@ -139,7 +139,8 @@ const Project_LI = React.createClass({
 	},
 
 	render: function() {
-		return <li className="work-list__project" onClick={ this.handleClick }>{ this.props.project }</li>;
+		let id = this.props.project.toLowerCase().split(' ').join('-');
+		return <li className="work-list__project" id={ id } onClick={ this.handleClick }>{ this.props.project }</li>;
 	}
 });
 
@@ -166,8 +167,24 @@ const Work_List = React.createClass({
 const Work = React.createClass({
 
 	getInitialState: function() {
+
+		const hash = window.location.hash;
+
 		return {
-			project : null
+			project : null,
+			hash    : hash
+		}
+	},
+
+	componentDidMount: function() {
+		
+		if ( this.state.hash !== '' ) {
+
+			const hashLen = this.state.hash.length;
+			const project = decodeURIComponent(this.state.hash).toLowerCase().split(' ').join('-').substr(1, hashLen);
+			const link    = document.querySelector(`#${project}`)
+			
+			link.click();
 		}
 	},
 
