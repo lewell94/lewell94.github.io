@@ -84,9 +84,9 @@ li {
 	}
 
 	.project__img {
-		height: 350px;
-		margin-bottom: 10px;
-		width: 720px;
+		display: block;
+		margin-bottom: 25px;
+		max-width: 100%;
 	}
 
 	.project__tags {

@@ -49,7 +49,8 @@ const work = [
 		name : 'The Tattoo Book App',
 		site : 'https://thetattoobook.co.uk/',
 		tags : ['React', 'ES6', 'Webapp', 'Framework 7', 'APIs', 'iOS', 'Gulp'],
-		desc : "In addition to their new website, The Tattoo Book wanted a new app to launch. The app is an HTML5 webapp built with Phonegap, and uses Framework 7 to provide a native experience. The app communicates with a custom API built on the website that allows it receive the data it needs, and uses React for several interfaces including the messages, search results, and tattoo designs page."
+		desc : "In addition to their new website, The Tattoo Book wanted a new app to launch. The app is an HTML5 webapp built with Phonegap, and uses Framework 7 to provide a native experience. The app communicates with a custom API built on the website that allows it receive the data it needs, and uses React for several interfaces including the messages, search results, and tattoo designs page.",
+		imgs : ['ttbapp-profile', 'ttbapp-search', 'ttbapp-designs', 'ttbapp-message']
 	},
 	{
 		name : 'The Tattoo Book',
@@ -69,7 +70,8 @@ const work = [
 		name : 'Airparks',
 		site : 'http://www.airparks.co.uk/',
 		tags : ['Framework 7', 'Javascript', 'APIs'],
-		desc : 'Aiport car parking company Airparks wanted an app for customers to keep track of their cars whilst on holiday. The app uses Framework 7 to provide a native experience, and connects to the Airparks API to obtain the data. The app provides customers with a screen that shows them the location and status of their car, as well as allowing them to purchase upgrades and change their personal details.'
+		desc : 'Aiport car parking company Airparks wanted an app for customers to keep track of their cars whilst on holiday. The app uses Framework 7 to provide a native experience, and connects to the Airparks API to obtain the data. The app provides customers with a screen that shows them the location and status of their car, as well as allowing them to purchase upgrades and change their personal details.',
+		imgs : ['airparks-home', 'airparks-menu', 'airparks-location', 'airparks-date', 'airparks-map', 'airparks-extra']
 	},
 	{
 		name : 'Spearhead eLearning',
@@ -108,8 +110,8 @@ const Project = React.createClass({
 				let src = `./img/${img}.png`;
 
 				return (
-					<a href={ url }>
-						<img src={ src } alt={ img } className="project__img" />
+					<a href={ url } target="_blank">
+						<img src={ src } alt={ img } className="project__img" onLoad="this.width/=2;this.onload=null;" />
 					</a>
 				);
 			});
