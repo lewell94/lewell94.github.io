@@ -30,19 +30,20 @@ const work = [
 		name : 'Park IT ANPR',
 		site : 'http://www.park-it-solutions.com/',
 		tags : ['Node.js', 'ES6', 'APIs', 'Pug', 'SCSS', 'Gulp'],
-		desc : "Built for airport parking company Park IT's Automatic Number Plate Recognition system, "
+		desc : "Built for airport parking company Park IT's Automatic Number Plate Recognition system, this system recieves customer information from Park IT then displays it to the driver. The main function is to tell the driver where to park, but also includes adverts which can be updated in the back end I created for it."
 	},
 	{
 		name : 'Crucial Trading Rugbuilder',
 		site : 'http://www.crucial-trading.com/rugbuilder',
 		tags : ['React', 'ES6', 'Three.js', 'Wordpress', 'PHP', 'SCSS', 'Gulp'],
-		desc : "For their new website luxary rug company Crucial Trading wanted a Rug Builder that would allow customers to customise rugs in real time. Their previous solution was simple and image based, and therefore was limited in the user's ability to appreciate their designed rugs in full. For the new Rug Builder a more advanced solution was built utilising WebGL through Three.js for displaying the rug to the user, and React for the UI, which allows for a more responsive UI."
+		desc : "For their new website luxary rug company Crucial Trading wanted a Rug Builder that would allow customers to customise rugs in real time. Their previous solution was simple and image based, and therefore was limited in the user's ability to appreciate their designed rugs in full. For the new Rug Builder a more advanced solution was built utilising WebGL through Three.js for displaying the rug to the user, and React for the UI, which allows for a more responsive UI.",
+		imgs : ['builder-start', 'builder-materials', 'builder-swatches', 'builder-complete']
 	},
 	{
 		name : 'Crucial Trading Website',
 		site : 'http://www.crucial-trading.com/',
 		tags : ['ES6', 'Wordpress', 'PHP', 'SCSS', 'Gulp'],
-		desc : "Working for luxary rug company Crucial Trading to develop their new website, the website is a ",
+		desc : "Working for luxary rug company Crucial Trading to develop their new website, the website is a simple Wordpress site with a focus on design and UI. The site features a lot of CSS3 animation and other features that contribute to a premium feel that matches Crucial's brand.",
 		imgs : ['crucial-home', 'crucial-inspiration', 'crucial-material', 'crucial-search']
 	},
 	{
@@ -56,7 +57,7 @@ const work = [
 		name : 'The Tattoo Book',
 		site : 'https://thetattoobook.co.uk/',
 		tags : ['Wordpress', 'PHP', 'Javascript', 'SCSS'],
-		desc : 'The Tattoo ',
+		desc : 'The Tattoo Book is a social network revolving around tattoos. The site has several social network features such as user profiles, a search function, private messaging, as well as the ability for customers to upload designs they want to artists, and for artists to upload designs they have to customers. The site is built on Wordpress but has lots of custom features.',
 		imgs : ['tattoobook-home', 'tattoobook-profile', 'tattoobook-request', 'tattoobook-search']
 	},
 	{
