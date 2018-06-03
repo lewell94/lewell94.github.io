@@ -1,4 +1,4 @@
-const skills = ['ES6', 'React', 'Node.js', 'PHP', 'SCSS', 'Wordpress', 'Gulp', 'Three.js', 'Framework 7'];
+const skills = ['ES6', 'Angular', 'React', 'Node.js', 'SCSS', 'Gulp', 'HTML5', 'Webpack', 'Karma', 'Mocha', 'PHP', 'Three.js', 'Framework7', 'AG Grid'];
 
 const Skill = React.createClass({
 
